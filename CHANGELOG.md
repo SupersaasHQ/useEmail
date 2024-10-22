@@ -2,7 +2,6 @@
 
 ## v0.0.3
 
-
 ### 🏡 Chore
 
 - Apply automated updates ([c923343](https://github.com/SupersaasHQ/useEmail/commit/c923343))
