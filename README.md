@@ -12,8 +12,8 @@ Supported Providers
 
 <!-- automd:badges color=yellow -->
 
-[![npm version](https://img.shields.io/npm/v/supersaas-useemail?color=yellow)](https://npmjs.com/package/supersaas-useemail)
-[![npm downloads](https://img.shields.io/npm/dm/supersaas-useemail?color=yellow)](https://npmjs.com/package/supersaas-useemail)
+[![npm version](https://img.shields.io/npm/v/uesEmail?color=yellow)](https://npmjs.com/package/uesEmail)
+[![npm downloads](https://img.shields.io/npm/dm/uesEmail?color=yellow)](https://npmjs.com/package/uesEmail)
 
 <!-- /automd -->
 
@@ -27,19 +27,19 @@ Install package:
 
 ```sh
 # ✨ Auto-detect
-npx nypm install supersaas-useemail
+npx nypm install uesEmail
 
 # npm
-npm install supersaas-useemail
+npm install uesEmail
 
 # yarn
-yarn add supersaas-useemail
+yarn add uesEmail
 
 # pnpm
-pnpm install supersaas-useemail
+pnpm install uesEmail
 
 # bun
-bun install supersaas-useemail
+bun install uesEmail
 ```
 
 <!-- /automd -->
