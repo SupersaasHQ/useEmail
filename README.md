@@ -12,8 +12,8 @@ Supported Providers
 
 <!-- automd:badges color=yellow -->
 
-[![npm version](https://img.shields.io/npm/v/packageName?color=yellow)](https://npmjs.com/package/packageName)
-[![npm downloads](https://img.shields.io/npm/dm/packageName?color=yellow)](https://npmjs.com/package/packageName)
+[![npm version](https://img.shields.io/npm/v/supersaas-useemail?color=yellow)](https://npmjs.com/package/supersaas-useemail)
+[![npm downloads](https://img.shields.io/npm/dm/supersaas-useemail?color=yellow)](https://npmjs.com/package/supersaas-useemail)
 
 <!-- /automd -->
 
@@ -27,19 +27,19 @@ Install package:
 
 ```sh
 # ✨ Auto-detect
-npx nypm install supersaas
+npx nypm install supersaas-useemail
 
 # npm
-npm install packageName
+npm install supersaas-useemail
 
 # yarn
-yarn add packageName
+yarn add supersaas-useemail
 
 # pnpm
-pnpm install packageName
+pnpm install supersaas-useemail
 
 # bun
-bun install packageName
+bun install supersaas-useemail
 ```
 
 <!-- /automd -->
@@ -86,11 +86,11 @@ import {} from "https://esm.sh/pkg";
 
 <!-- automd:contributors license=MIT -->
 
-Published under the [MIT](https://github.com/unjs/packageName/blob/main/LICENSE) license.
-Made by [community](https://github.com/unjs/packageName/graphs/contributors) 💛
+Published under the [MIT](https://github.com/SupersaasHQ/useEmail/blob/main/LICENSE) license.
+Made by [community](https://github.com/SupersaasHQ/useEmail/graphs/contributors) 💛
 <br><br>
-<a href="https://github.com/unjs/packageName/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=unjs/packageName" />
+<a href="https://github.com/SupersaasHQ/useEmail/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=SupersaasHQ/useEmail" />
 </a>
 
 <!-- /automd -->
