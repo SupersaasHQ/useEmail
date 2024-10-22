@@ -12,8 +12,8 @@ Supported Providers
 
 <!-- automd:badges color=yellow -->
 
-[![npm version](https://img.shields.io/npm/v/uesEmail?color=yellow)](https://npmjs.com/package/uesEmail)
-[![npm downloads](https://img.shields.io/npm/dm/uesEmail?color=yellow)](https://npmjs.com/package/uesEmail)
+[![npm version](https://img.shields.io/npm/v/use-email?color=yellow)](https://npmjs.com/package/use-email)
+[![npm downloads](https://img.shields.io/npm/dm/use-email?color=yellow)](https://npmjs.com/package/use-email)
 
 <!-- /automd -->
 
@@ -27,19 +27,19 @@ Install package:
 
 ```sh
 # ✨ Auto-detect
-npx nypm install uesEmail
+npx nypm install use-email
 
 # npm
-npm install uesEmail
+npm install use-email
 
 # yarn
-yarn add uesEmail
+yarn add use-email
 
 # pnpm
-pnpm install uesEmail
+pnpm install use-email
 
 # bun
-bun install uesEmail
+bun install use-email
 ```
 
 <!-- /automd -->
