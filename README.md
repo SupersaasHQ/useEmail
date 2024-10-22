@@ -1,5 +1,12 @@
 # Supersaas/UseEmail
 
+<!-- automd:badges color=yellow -->
+
+[![npm version](https://img.shields.io/npm/v/use-email?color=yellow)](https://npmjs.com/package/use-email)
+[![npm downloads](https://img.shields.io/npm/dm/use-email?color=yellow)](https://npmjs.com/package/use-email)
+
+<!-- /automd -->
+
 A Unified hook for sending emails, bring your own provider and use this package to send emails. Works on Node.js, Bun, Deno and Cloudflare Workers. Typesafe and supports modern email providers.
 
 Supported Providers
