@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.3
+
+
+### 🏡 Chore
+
+- Apply automated updates ([c923343](https://github.com/SupersaasHQ/useEmail/commit/c923343))
+- **release:** V0.0.2 ([a846823](https://github.com/SupersaasHQ/useEmail/commit/a846823))
+
+### ❤️ Contributors
+
+- Fayaz Ahmed ([@fayazara](http://github.com/fayazara))
+
 ## v0.0.2
 
 ## v0.0.1
