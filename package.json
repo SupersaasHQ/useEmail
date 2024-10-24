@@ -11,6 +11,31 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./mailgun": {
+      "types": "./dist/services/mailgun.d.ts",
+      "import": "./dist/services/mailgun.mjs",
+      "require": "./dist/services/mailgun.cjs"
+    },
+    "./plunk": {
+      "types": "./dist/services/plunk.d.ts",
+      "import": "./dist/services/plunk.mjs",
+      "require": "./dist/services/plunk.cjs"
+    },
+    "./postmark": {
+      "types": "./dist/services/postmark.d.ts",
+      "import": "./dist/services/postmark.mjs",
+      "require": "./dist/services/postmark.cjs"
+    },
+    "./resend": {
+      "types": "./dist/services/resend.d.ts",
+      "import": "./dist/services/resend.mjs",
+      "require": "./dist/services/resend.cjs"
+    },
+    "./sendgrid": {
+      "types": "./dist/services/sendgrid.d.ts",
+      "import": "./dist/services/sendgrid.mjs",
+      "require": "./dist/services/sendgrid.cjs"
     }
   },
   "main": "./dist/index.cjs",
