@@ -6,6 +6,7 @@ export default defineBuildConfig({
     "src/services/mailgun",
     "src/services/plunk",
     "src/services/postmark",
+    "src/services/resend",
     "src/services/sendgrid",
   ],
   clean: false,
