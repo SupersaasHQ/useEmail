@@ -28,10 +28,13 @@ export const MailgunService = (): EmailService => {
     if (html) formData.append("html", html);
 
     try {
+      
+      const encodedCredentials = Buffer.from(`api:${MAILGUN_API_KEY}`).toString("base64");
+
       await $fetch(MAILGUN_API_URL, {
         method: "POST",
         headers: {
-          Authorization: `api:${MAILGUN_API_KEY}`,
+          Authorization: `Basic ${encodedCredentials}`,
         },
         body: formData,
       });
