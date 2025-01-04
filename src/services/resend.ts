@@ -15,7 +15,6 @@ export class ResendService implements EmailService {
   }
 
   async send(emailOptions: EmailOptions): Promise<void> {
-    console.log(this.apiToken);
     if (!this.apiToken) {
       throw new Error("Resend API token is missing");
     }
