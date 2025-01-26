@@ -119,19 +119,19 @@ Import:
 **ESM** (Node.js, Bun)
 
 ```js
-import {} from "use-email";
+import {} from "pkg";
 ```
 
 **CommonJS** (Legacy Node.js)
 
 ```js
-const {} = require("use-email");
+const {} = require("pkg");
 ```
 
 **CDN** (Deno, Bun and Browsers)
 
 ```js
-import {} from "https://esm.sh/use-email";
+import {} from "https://esm.sh/pkg";
 ```
 
 <!-- /automd -->
