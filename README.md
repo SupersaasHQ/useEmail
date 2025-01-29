@@ -28,6 +28,31 @@ Supports modern email providers
 Installation
 You can install the package using your preferred package manager:
 
+## Before calling any provider
+
+Update the .env file with the provider that you wil support:
+
+```env
+# Mailgun
+MAILGUN_API_KEY=<TOKEN>
+MAILGUN_DOMAIN=<DOMAIN>
+
+#Plunk
+PLUNK_API_TOKEN=<TOKEN>
+
+#Postmark
+POSTMARK_SERVER_TOKEN=<token>
+
+#Resend
+RESEND_API_TOKEN=<TOKEN>
+
+#Sendgrid
+SENDGRID_API_KEY=<TOKEN>
+```
+
+
+## Usage
+
 ```ts
 import { useEmail } from "use-email";
 
