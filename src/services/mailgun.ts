@@ -8,7 +8,7 @@ import type { EmailService } from "../types/email-service";
 export const MailgunService = (): EmailService => {
   const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
   const MAILGUN_DOMAIN = process.env.MAILGUN_DOMAIN;
-  const MAILGUN_API_URL = `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`;
+  const MAILGUN_API_URL = process.env.MAILGUN_API_URL || `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`;
 
   const send = async (emailOptions: EmailOptions): Promise<void> => {
     if (!MAILGUN_API_KEY || !MAILGUN_DOMAIN) {
