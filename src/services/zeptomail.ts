@@ -9,10 +9,7 @@ export class ZeptoMailService implements EmailService {
   private apiKey: string;
   private apiUrl: string;
 
-  constructor(
-    apiKey?: string,
-    apiUrl = "https://api.zeptomail.in/v1.1/email",
-  ) {
+  constructor(apiKey?: string, apiUrl = "https://api.zeptomail.in/v1.1/email") {
     this.apiKey = apiKey || process.env.ZEPTOMAIL_API_KEY || "";
     this.apiUrl = apiUrl;
   }
@@ -56,9 +53,9 @@ export class ZeptoMailService implements EmailService {
       const response = await $fetch(this.apiUrl, {
         method: "POST",
         headers: {
-          "Accept": "application/json",
+          Accept: "application/json",
           "Content-Type": "application/json",
-          "Authorization": `Zoho-enczapikey ${this.apiKey}`,
+          Authorization: `Zoho-enczapikey ${this.apiKey}`,
         },
         body: JSON.stringify(payload),
       });

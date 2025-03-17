@@ -8,7 +8,9 @@ import type { EmailService } from "../types/email-service";
 export const MailgunService = (): EmailService => {
   const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
   const MAILGUN_DOMAIN = process.env.MAILGUN_DOMAIN;
-  const MAILGUN_API_URL = process.env.MAILGUN_API_URL || `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`;
+  const MAILGUN_API_URL =
+    process.env.MAILGUN_API_URL ||
+    `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`;
 
   const send = async (emailOptions: EmailOptions): Promise<void> => {
     if (!MAILGUN_API_KEY || !MAILGUN_DOMAIN) {
@@ -28,14 +30,14 @@ export const MailgunService = (): EmailService => {
     if (html) formData.append("html", html);
 
     try {
-      
       const mailgunBasicAuthUsernameAndKey = `api:${MAILGUN_API_KEY}`;
-      const encodedCredentials = typeof Buffer !== "undefined"
+      const encodedCredentials =
+        typeof Buffer !== "undefined"
           ? Buffer.from(mailgunBasicAuthUsernameAndKey).toString("base64")
-          // `btoa` in non-Node environments
-          //The merits of using btoa are mixed. 
-          //It’s not actually a deprecated API; it’s merely marked as legacy
-          : btoa(mailgunBasicAuthUsernameAndKey)
+          : // `btoa` in non-Node environments
+            //The merits of using btoa are mixed.
+            //It’s not actually a deprecated API; it’s merely marked as legacy
+            btoa(mailgunBasicAuthUsernameAndKey);
 
       await $fetch(MAILGUN_API_URL, {
         method: "POST",
