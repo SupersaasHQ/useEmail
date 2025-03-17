@@ -17,4 +17,5 @@ export type EmailProvider =
   | "plunk"
   | "sendgrid"
   | "postmark"
-  | "mailgun";
+  | "mailgun"
+  | "zeptomail";
