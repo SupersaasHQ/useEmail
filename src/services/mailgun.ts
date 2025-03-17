@@ -32,12 +32,9 @@ export const MailgunService = (): EmailService => {
     try {
       const mailgunBasicAuthUsernameAndKey = `api:${MAILGUN_API_KEY}`;
       const encodedCredentials =
-        typeof Buffer !== "undefined"
-          ? Buffer.from(mailgunBasicAuthUsernameAndKey).toString("base64")
-          : // `btoa` in non-Node environments
-            //The merits of using btoa are mixed.
-            //It’s not actually a deprecated API; it’s merely marked as legacy
-            btoa(mailgunBasicAuthUsernameAndKey);
+        typeof Buffer === "undefined"
+          ? btoa(mailgunBasicAuthUsernameAndKey)
+          : Buffer.from(mailgunBasicAuthUsernameAndKey).toString("base64");
 
       await $fetch(MAILGUN_API_URL, {
         method: "POST",

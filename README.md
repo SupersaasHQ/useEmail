@@ -86,11 +86,11 @@ The send method accepts an EmailOptions object with the following properties:
 
 ```ts
 type EmailOptions = {
-  from: string;
-  to: string | string[];
-  subject: string;
-  html?: string;
-  text?: string;
+  from: string; // Sender email address
+  to: string | string[]; // Recipient email address(es)
+  subject: string; // Email subject
+  html?: string; // HTML content of the email (optional)
+  text?: string; // Plain text content of the email (optional)
 };
 ```
 
@@ -183,13 +183,13 @@ Sends an email using the configured provider.
 
 - `options`: EmailOptions object with the following properties:
   ```ts
-  {
-    from: string;      // Sender email address
+  type EmailOptions = {
+    from: string; // Sender email address
     to: string | string[]; // Recipient email address(es)
-    subject: string;   // Email subject
-    html?: string;     // HTML content of the email (optional)
-    text?: string;     // Plain text content of the email (optional)
-  }
+    subject: string; // Email subject
+    html?: string; // HTML content of the email (optional)
+    text?: string; // Plain text content of the email (optional)
+  };
   ```
 
 **Returns:**
