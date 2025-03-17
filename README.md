@@ -24,6 +24,7 @@ Supports modern email providers
 3. Postmark
 4. Plunk
 5. Mailgun
+6. Zeptomail (Zoho)
 
 Installation
 You can install the package using your preferred package manager:
@@ -48,8 +49,10 @@ RESEND_API_TOKEN=<TOKEN>
 
 #Sendgrid
 SENDGRID_API_KEY=<TOKEN>
-```
 
+#ZEPTOMAIL
+ZEPTOMAIL_API_KEY=<TOKEN>
+```
 
 ## Usage
 
@@ -74,6 +77,7 @@ const sendgridService = useEmail("sendgrid");
 const postmarkService = useEmail("postmark");
 const plunkService = useEmail("plunk");
 const mailgunService = useEmail("mailgun");
+const zeptomailService = useEmail("zeptomail");
 ```
 
 ## Email Options
@@ -139,27 +143,76 @@ bun install use-email
 
 Import:
 
-<!-- automd:jsimport cjs cdn name="pkg" -->
-
 **ESM** (Node.js, Bun)
 
 ```js
-import {} from "pkg";
+import { useEmail } from "use-email";
 ```
 
 **CommonJS** (Legacy Node.js)
 
 ```js
-const {} = require("pkg");
+const { useEmail } = require("use-email");
 ```
 
 **CDN** (Deno, Bun and Browsers)
 
 ```js
-import {} from "https://esm.sh/pkg";
+import { useEmail } from "https://esm.sh/use-email";
 ```
 
-<!-- /automd -->
+## API Reference
+
+### `useEmail(provider: EmailProvider)`
+
+Creates an email service instance for the specified provider.
+
+**Parameters:**
+
+- `provider`: One of `"resend"` | `"sendgrid"` | `"postmark"` | `"plunk"` | `"mailgun"` | `"zeptomail"`
+
+**Returns:**
+
+- An email service instance with a `send` method
+
+### `send(options: EmailOptions)`
+
+Sends an email using the configured provider.
+
+**Parameters:**
+
+- `options`: EmailOptions object with the following properties:
+  ```ts
+  {
+    from: string;      // Sender email address
+    to: string | string[]; // Recipient email address(es)
+    subject: string;   // Email subject
+    html?: string;     // HTML content of the email (optional)
+    text?: string;     // Plain text content of the email (optional)
+  }
+  ```
+
+**Returns:**
+
+- A Promise that resolves when the email is sent successfully
+
+**Example:**
+
+```ts
+const emailService = useEmail("resend");
+
+try {
+  await emailService.send({
+    from: "noreply@yourdomain.com",
+    to: ["user@example.com", "another@example.com"],
+    subject: "Welcome!",
+    html: "<h1>Welcome to our service!</h1>",
+    text: "Welcome to our service!",
+  });
+} catch (error) {
+  console.error("Failed to send email:", error);
+}
+```
 
 ## Development
 
