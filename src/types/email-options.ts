@@ -18,4 +18,5 @@ export type EmailProvider =
   | "sendgrid"
   | "postmark"
   | "mailgun"
-  | "zeptomail";
+  | "zeptomail"
+  | "brevo";
