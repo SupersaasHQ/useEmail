@@ -46,6 +46,7 @@
   },
   "packageManager": "pnpm@10.6.3",
   "dependencies": {
+    "consola": "^3.4.2",
     "ofetch": "^1.4.1"
   }
 }
