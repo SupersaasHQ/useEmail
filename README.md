@@ -3,7 +3,7 @@
 <!-- automd:badges color=yellow -->
 
 [![npm version](https://img.shields.io/npm/v/use-email?color=yellow)](https://npmjs.com/package/use-email)
-[![npm downloads](https://img.shields.io/npm/dm/use-email?color=yellow)](https://npmjs.com/package/use-email)
+[![npm downloads](https://img.shields.io/npm/dm/use-email?color=yellow)](https://npm.chart.dev/use-email)
 
 <!-- /automd -->
 
@@ -137,6 +137,9 @@ pnpm install use-email
 
 # bun
 bun install use-email
+
+# deno
+deno install use-email
 ```
 
 <!-- /automd -->
