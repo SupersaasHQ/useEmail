@@ -5,6 +5,7 @@ import { SendGridService } from "./services/sendgrid";
 import { ZeptoMailService } from "./services/zeptomail";
 import type { EmailProvider } from "./types/email-options";
 import type { EmailService } from "./types/email-service";
+import { MockService } from "./services/mock";
 
 /**
  * Factory function to get the email service based on the provider
@@ -28,6 +29,9 @@ export function useEmail(provider: EmailProvider): EmailService {
     }
     case "zeptomail": {
       return new ZeptoMailService();
+    }
+    case "mock": {
+      return MockService();
     }
     default: {
       throw new Error(`Unsupported email provider: ${provider}`);
